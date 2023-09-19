@@ -1,0 +1,9 @@
+<div *ngFor="let f of fournisseur;let i = index">
+    <fieldset [ngStyle]="{'background-color': f.libelle === 'hp' ? 'green' : 'yellow'}" (dblclick)="supprimerFournisseur(i)">
+        <legend>Informations fournisseur</legend>
+      <p>idFournisseur: {{ f.idFournisseur }}</p>
+      <p [style.font-weight]="getColor(f.code)">code: {{ f.code }}</p>
+      <p>libelle: {{ f.libelle }}</p>
+    </fieldset>
+  </div>
+  
